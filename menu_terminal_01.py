@@ -1,3 +1,7 @@
+# Acrescentar endereço.
+# Telefone.
+# Tratamento de erros.
+
 import time # Importação da biblioteca para usar time.
 
 on = True   # Declarando variáveis booleanas.
@@ -42,8 +46,12 @@ while on == True:   # Enquanto variável (on) for verdadeira faça isso.
 
         else:
             print('\033[1:31m# Código Não Encontrado #\033[m')
-            print('\nRetornando ao Menu Principal\n')
-            time.sleep(2)
+            print('\n\033[34mRetornando ao Menu Principal em\033[m \033[32m3\033[m')
+            time.sleep(1)
+            print('\033[34mRetornando ao Menu Principal em\033[m \033[33m2\033[m')
+            time.sleep(1)
+            print('\033[34mRetornando ao Menu Principal em\033[m \033[31m1\033[m')
+            time.sleep(1)
 
     # Se variável choice receber o número 3 faça isso.
     elif choice == 3:
