@@ -16,6 +16,7 @@ while on == True:   # Enquanto variável (on) for verdadeira faça isso.
         print('\033[1:31m# Cadastro de Clientes #\033[m')
         print('\033[34mDigite o nome do cliente que deseja cadastrar\033[m')
         nome_1 = str(input('\033[32mNome do Cliente: \033[m'))
+        data_nasc = int(input('Data de Nascimento: '))
         print('\n\033[1:31mCliente Cadastrado com Sucesso!\033[m')
         print('\033[34mRetornando ao Menu Principal em\033[m \033[32m3\033[m')
         time.sleep(1)
@@ -28,10 +29,10 @@ while on == True:   # Enquanto variável (on) for verdadeira faça isso.
     elif choice == 2:
         print('\n')
         print('\033[1:31m# Consulta de Clientes #\033[m')
-        finder = str(input('\033[32mNome do cliente: \033[m'))
+        finder = str(input('\033[32mDigite o nome para buscar: \033[m\n'))
         if finder == nome_1:
-            print('Nome do cliente encontrado')
-            print(nome_1)
+            print('\033[1:32m#Nome do Cliente Encontrado #\033[m')
+            print('Nome: {}'.format(nome_1))
         else:
             print('Nome não encontrado!')
         print('\n Retornando ao Menu Principal\n')
