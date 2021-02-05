@@ -1,15 +1,16 @@
-import time
+import time # Importação da biblioteca para usar time.
 
-on = True
+on = True   # Declarando variáveis booleanas.
 off = False
 
-while on == True:
-    print('\033[1:31m # Menu #\033[m')
-    print('\033[1:31m[1]\033[m \033[Cadastrar Clientes')
-    print('\033[1:31m[2]\033[m Consultar Clientes')
-    print('\033[1:31m[3]\033[m Sair')
+while on == True:   # Enquanto variável (on) for verdadeira faça isso.
+    print('\033[1:31m       # Menu #\033[m')
+    print('\033[1:31m[1]\033[m \033[34mCadastrar Clientes')    #\033[1:31m textocolorido \033[m
+    print('\033[1:31m[2]\033[m \033[34mConsultar Clientes')         #Códigos de cores.
+    print('\033[1:31m[3]\033[m \033[34mSair\033[m')
 
-    choice = int(input('Digite sua escolha: '))
+    # Se variável choice receber o número 1 faça isso.
+    choice = int(input('\033[32mDigite sua escolha: \033[m'))
     if choice == 1:
         print('\n')
         print('# Cadastro de Clientes #')
@@ -19,6 +20,7 @@ while on == True:
         print('Retornando ao Menu Principal\n')
         time.sleep(2)
 
+    # Se variável choice receber o número 2 faça isso.
     elif choice == 2:
         print('\n')
         print('# Consulta de clientes #')
@@ -28,6 +30,7 @@ while on == True:
         print('\n Retornando ao Menu Principal\n')
         time.sleep(2)
 
+    # Se variável choice receber o número 3 faça isso.
     elif choice == 3:
         on == False
         print('Saindo do programa em 1 ...')
@@ -37,19 +40,4 @@ while on == True:
         print('Saindo do programa em 3 ...')
         time.sleep(1)
         break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
