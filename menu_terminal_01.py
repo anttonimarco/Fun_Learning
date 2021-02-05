@@ -14,30 +14,37 @@ while on == True:   # Enquanto variável (on) for verdadeira faça isso.
     if choice == 1:
         print('\n')
         print('\033[1:31m# Cadastro de Clientes #\033[m')
-        print('Digite o nome do cliente que deseja cadastrar')
-        name = str(input('Nome novo Cliente: '))
-        print('\nCliente Cadastrado com Sucesso!')
-        print('Retornando ao Menu Principal\n')
-        time.sleep(2)
+        print('\033[34mDigite o nome do cliente que deseja cadastrar\033[m')
+        nome_1 = str(input('\033[32mNome do Cliente: \033[m'))
+        print('\n\033[1:31mCliente Cadastrado com Sucesso!\033[m')
+        print('\033[34mRetornando ao Menu Principal em\033[m \033[32m3\033[m')
+        time.sleep(1)
+        print('\033[34mRetornando ao Menu Principal em\033[m \033[33m2\033[m')
+        time.sleep(1)
+        print('\033[34mRetornando ao Menu Principal em\033[m \033[31m1\033[m\n')
+        time.sleep(1)
 
     # Se variável choice receber o número 2 faça isso.
     elif choice == 2:
         print('\n')
-        print('# Consulta de clientes #')
-        find = str(input('Nome do cliente: '))
-        if find == name:
-            print(name)
+        print('\033[1:31m# Consulta de Clientes #\033[m')
+        finder = str(input('\033[32mNome do cliente: \033[m'))
+        if finder == nome_1:
+            print('Nome do cliente encontrado')
+            print(nome_1)
+        else:
+            print('Nome não encontrado!')
         print('\n Retornando ao Menu Principal\n')
         time.sleep(2)
 
     # Se variável choice receber o número 3 faça isso.
     elif choice == 3:
-        on == False
-        print('Saindo do programa em 1 ...')
+        var = on == False
+        print('\033[34mSaindo do programa em\033[m \033[32m3\033[m')
         time.sleep(1)
-        print('Saindo do programa em 2 ...')
+        print('\033[34mSaindo do programa em\033[m \033[33m2\033[m')
         time.sleep(1)
-        print('Saindo do programa em 3 ...')
+        print('\033[34mSaindo do programa em\033[m \033[31m1\033[m')
         time.sleep(1)
         break
 
