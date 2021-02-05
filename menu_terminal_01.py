@@ -31,16 +31,19 @@ while on == True:   # Enquanto variável (on) for verdadeira faça isso.
     elif choice == 2:
         print('\n')
         print('\033[1:31m# Consulta de Clientes #\033[m')
-        finder = int(input('\033[32mDigite o nome para buscar: \033[m\n'))
+        finder = int(input('\033[32mDigite um Código para Buscar: \033[m\n'))
         if finder == codigo:
             print('\033[1:32m#Nome do Cliente Encontrado #\033[m')
             print('Nome: {}'.format(nome_1.capitalize()))
             print('Data Nascimento: {}'.format(data_nasc))
-            print('Sexo: {}'.format(sexo))
+            print('Sexo: {}'.format(sexo.capitalize()))
+            time.sleep(2)
+            cont = str(input('Digite alguma tecla para continuar...\n'))
+
         else:
-            print('Nome não encontrado!')
-        print('\n Retornando ao Menu Principal\n')
-        time.sleep(2)
+            print('\033[1:31m# Código Não Encontrado #\033[m')
+            print('\nRetornando ao Menu Principal\n')
+            time.sleep(2)
 
     # Se variável choice receber o número 3 faça isso.
     elif choice == 3:
