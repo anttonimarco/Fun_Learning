@@ -13,7 +13,7 @@ while on == True:   # Enquanto variável (on) for verdadeira faça isso.
     choice = int(input('\033[32mDigite sua escolha: \033[m'))
     if choice == 1:
         print('\n')
-        print('# Cadastro de Clientes #')
+        print('\033[1:31m# Cadastro de Clientes #\033[m')
         print('Digite o nome do cliente que deseja cadastrar')
         name = str(input('Nome novo Cliente: '))
         print('\nCliente Cadastrado com Sucesso!')
