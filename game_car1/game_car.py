@@ -2,9 +2,13 @@ import pygame  # Importando pygame
 
 pygame.init()
 
-horizontal = 400
+horizontal = 400    # Definindo a posição na tela do objeto.
 vertical = 300
-velocidade = 5
+
+velocidade = 5  # Velocidade.
+
+fundo_pista = pygame.image.load('pista1.jpg')
+car1 = pygame.image.load('car1.jpg')
 
 janela = pygame.display.set_mode((800, 600))  # Definindo a variável que vai receber o display.
 pygame.display.set_caption('Game Python')  # Nome da janela.
@@ -21,7 +25,7 @@ while janela_on:  # Enquanto variável janela_on for verdadeiro(True) Faça isso
 
     comandos = pygame.key.get_pressed()  # variável comandos, recebendo um comando de uma tecla.
     if comandos[pygame.K_UP]:  # Se a variável comandos receber a tecla para cima apertada faça.
-        vertical -= velocidade
+        vertical -= velocidade # vertical (-) velocidade.
 
     if comandos[pygame.K_DOWN]:
         vertical += velocidade
@@ -32,8 +36,9 @@ while janela_on:  # Enquanto variável janela_on for verdadeiro(True) Faça isso
     if comandos[pygame.K_LEFT]:
         horizontal -= velocidade
 
-    janela.fill((0, 0, 0))
-    pygame.draw.circle(janela, (0, 255, 0), (horizontal, vertical), 50)  # Criação do objeto.
+    janela.blit(fundo_pista, (35, 0))
+    janela.blit(car1, (horizontal, vertical))
+
     pygame.display.update()  # Atualiza a tela para aparecer o objeto.
 
 pygame.quit()
